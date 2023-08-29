@@ -1,5 +1,4 @@
 # Wrath-Reborn
-#Wrath-Reborn
 
 This is the code base of Wrath Reborn a game made with Unity3d written in C#.
 
