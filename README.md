@@ -14,6 +14,7 @@ Controls:
 It is simple. Use the mouse to point and shoot with left mouse button.
 Thats it :)
 
+[In-Game-Screenshot](wrathreborn.jpg)
 
 Credits:
 
