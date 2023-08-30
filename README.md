@@ -1,4 +1,4 @@
-# Wrath-Reborn
+#Wrath-Reborn
 
 This is the code base of Wrath Reborn a game made with Unity3d written in C#.
 
@@ -22,7 +22,7 @@ The flash game Wrath
 https://armegalo.newgrounds.com/
 
 Mathias Püski
-Destroyed model versions and the action music
+Destroyed model versions of Trees and Cactus
 https://www.pueski.de
 
 Assets used:
@@ -48,3 +48,5 @@ https://assetstore.unity.com/packages/3d/characters/animals/animated-goat-and-sh
 Cartoon FX Remaster Free
 https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-free-109565
 
+Rock & Metal Songs, Loops & Stings for Games
+https://assetstore.unity.com/packages/audio/music/rock/rock-metal-songs-loops-stings-for-games-220938
