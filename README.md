@@ -14,7 +14,7 @@ Controls:
 It is simple. Use the mouse to point and shoot with left mouse button.
 Thats it :)
 
-[In-Game-Screenshot](wrathreborn.jpg)
+![In-Game-Screenshot](wrathreborn.jpg)
 
 There are not any different versions like Alpha, Beta, just the one i will reupload if any significant changes are made.
 You can build the Project your self or if you trust me, you can use this Link:
