@@ -20,6 +20,8 @@ There are not any different versions like Alpha, Beta, just the one i will reupl
 You can build the Project your self or if you trust me, you can use this Link:
 https://drive.google.com/file/d/1S0mm2UbUYDsNaScgdlfYjlG02iVoCNlX/view?usp=sharing
 
+How to Play: Unzip and run!
+
 Please do not upload any builds of the game elsewhere. Thank you!
 
 Credits:
