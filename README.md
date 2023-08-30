@@ -22,7 +22,7 @@ The flash game Wrath
 https://armegalo.newgrounds.com/
 
 Mathias Püski
-Destroyed model versions of Trees and Cactus
+-Destroyed model versions of Trees and Cactus
 https://www.pueski.de
 
 Assets used:
