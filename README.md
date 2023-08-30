@@ -16,6 +16,12 @@ Thats it :)
 
 [In-Game-Screenshot](wrathreborn.jpg)
 
+There are not any different versions like Alpha, Beta, just the one i will reupload if any significant changes are made.
+You can build the Project your self or if you trust me, you can use this Link:
+https://drive.google.com/file/d/1S0mm2UbUYDsNaScgdlfYjlG02iVoCNlX/view?usp=sharing
+
+Please do not upload any builds of the game elsewhere. Thank you!
+
 Credits:
 
 Armegalo
