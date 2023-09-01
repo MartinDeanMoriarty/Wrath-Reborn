@@ -6,17 +6,16 @@ using UnityEngine.UIElements;
 
 public class LightningController : MonoBehaviour
 {
-
     [Header("Bolt settings")]
+    [Tooltip("Projectile. Same as the main bolt")]
     public GameObject projectile;
-    public float shotInterval = 0.1f;
+    [Tooltip("Projectile. Same as the main bolt")]
     public float speed = 10f;
-
+    [Tooltip("Fire Sound")]
     public List<AudioSource> BoltSounds;
-
+    [Tooltip("Transform of the player/bolt")]
     public Transform Player;
-
-    [Header("DoNotChange")]
+    [Header("DoNotChangeInInspector")]
     public Vector3 mousePosition;
     public Vector3 worldMousePosition;
     public Vector3 direction;
@@ -25,10 +24,8 @@ public class LightningController : MonoBehaviour
     public Transform objectHit;
     private int soundCount = 0;
 
-
     void Update()
     {
-
         //Get and convert cursor position for bolt rotation
         mousePosition = Input.mousePosition;
         mousePosition.z = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
@@ -38,13 +35,11 @@ public class LightningController : MonoBehaviour
         //Rotate the bolt to the crosshair
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
 
-
         //Ahooting action
         if (Input.GetMouseButtonDown(0))
         {
             //Raycast for the bolt/projectile target
             RaycastHit hit;
-
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, float.MaxValue))
             {
@@ -62,19 +57,11 @@ public class LightningController : MonoBehaviour
                     soundCount = 0;
                 }
             }
-
-            Debug.DrawRay(ray.origin, hitPoint, Color.green, 10);
-            Debug.DrawRay(Player.position, (hitPoint - Player.position).normalized * speed, Color.red, 10);
-
+            //Instantiate the bolt
             GameObject projectileInstance = Instantiate(projectile, Player.position, gameObject.transform.rotation);
-
-
             float dist = Vector3.Distance(hitPoint, Player.position);
-
             //Fire the bolt          
             projectileInstance.GetComponent<Rigidbody>().AddForce((hitPoint - Player.position).normalized * speed * dist, ForceMode.Impulse);
-
         }
-
     }
 }

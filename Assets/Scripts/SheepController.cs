@@ -5,34 +5,32 @@ using UnityEngine;
 
 public class SheepController : MonoBehaviour
 {
-
+    [Header("SheepController settings")]
+    [Tooltip("Walking animation name")]
     private string walkForwardAnimation = "walk_forward";
-    //private string walkBackwardAnimation = "walk_backwards";
-    //private string runForwardAnimation = "run_forward";
+    [Tooltip("Turn left animation name")]
     private string turn90LAnimation = "turn_90_L";
+    [Tooltip("Turn right animation name")]
     private string turn90RAnimation = "turn_90_R";
-    //private string trotAnimation = "trot_forward";
-    //private string sittostandAnimation = "sit_to_stand";
-    //private string standtositAnimation = "stand_to_sit";
-
-    //Set duration of walking//
+    [Tooltip("Set duration of walking")]
     public float WalkingTime;
     public float RotationTime;
     //Set Speed of walking//
+    [Tooltip("Set Speed of walking")]
     private float Speed = 2;
     private float RotationSpeed = 2;
-    //Is object rotating or not//
-    public bool Rotating;
-    //1 clockwise and 2 counter clockwise//
-    private int RotateDir;
     //Set Limits to walk x and z axis//
     private float MaxX = 20;
     private float MinX = -20;
     private float MaxZ = 20;
     private float MinZ = -20;
-
+    //Is object rotating or not//
+    private bool Rotating;
+    //1 clockwise and 2 counter clockwise//
+    private int RotateDir;
     //When using define animator//
     Animator Anim;
+
     //Get the animator set walking time between 5 and 8 set rotating to false and rotate direction to 1 or 2//
     void Start()
     {
@@ -41,7 +39,6 @@ public class SheepController : MonoBehaviour
         RotationTime = Random.Range(1, 3);
         Rotating = false;
         RotateDir = Random.Range(1, 3);
-     
     }
     //On Collision turn -90 degrees//
     private void OnCollisionEnter(Collision collision)

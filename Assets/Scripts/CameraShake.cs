@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
+    [Header("Handheld Camera Effect")]
     public float positionAmplitude = 0.1f;
     public float rotationAmplitude = 1.0f;
     public float noiseFrequency = 1.0f;

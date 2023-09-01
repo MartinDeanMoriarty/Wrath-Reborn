@@ -5,7 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MoveToPoint : MonoBehaviour
 {
-    [Header("Cloud settings")]
+    [Header("This Moves the dark clouds in position when game starts")]
     [Tooltip("Speed of clouds")]
     public float Speed = 10F;
     [Tooltip("The target to move to")]

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MainCloudEffect : MonoBehaviour
 {
-    public SpriteRenderer ThisSprite;
+    [Header("Effect of the main cloud behind the bolt")]
+    private SpriteRenderer ThisSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,5 @@ public class MainCloudEffect : MonoBehaviour
         {
             ThisSprite.color = Color.white;
         }
-        
-
     }
 }

@@ -18,7 +18,7 @@ public class TitleScreen : MonoBehaviour
     [Tooltip("Audio1 Object")]
     public GameObject Audio1;
     [Tooltip("Audio2 Object")]
-    public GameObject Audio2;        
+    public GameObject Audio2;
     [Tooltip("All the single white clouds")]
     public List<GameObject> WhiteClouds;
     [Tooltip("The main light source")]
@@ -34,6 +34,7 @@ public class TitleScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Hit Space to play
         if (Input.GetKey(KeyCode.Space) && Title.activeSelf)
         {
             //Set fleeing=true in CloudController.cs
@@ -42,19 +43,21 @@ public class TitleScreen : MonoBehaviour
                 WhiteClouds[i].GetComponent<CloudController>().fleeing = true;
             }
             MainLightSource.intensity = 1;
-            Title.SetActive(false);             
+            Title.SetActive(false);
             Audio1.SetActive(false);
             CloudsDark.SetActive(true);
             Audio2.SetActive(true);
             Bold.SetActive(true);
-            GameController.payingGame = true;
+            GameController.playingGame = true;
         }
 
+        //Hit Escape to END game
         if (Input.GetKey(KeyCode.Escape) && Title.activeSelf == false)
         {
             EndGame();
         }
 
+        //Hit Escape to EXIT game
         if (Input.GetKey(KeyCode.Escape) && Title.activeSelf == true)
         {
             Application.Quit();
@@ -62,8 +65,10 @@ public class TitleScreen : MonoBehaviour
 
     }
 
+    //END game, not EXIT!
     public void EndGame()
     {
+        //Set up what to save with PlayerPrefs
         if (GameController.SheepHits > GameController.maxRoundHits)
         {
             value1 = GameController.SheepHits;
@@ -79,6 +84,7 @@ public class TitleScreen : MonoBehaviour
         PlayerPrefs.SetInt("All", value2);
         PlayerPrefs.Save(); // Make sure to save the changes
 
+        //Realod Scene
         Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
     }
 }

@@ -16,6 +16,7 @@ public class CloudController : MonoBehaviour
     private float FleeingSpeed = 5F;   
     private bool Rotating;
     private int RotateDir;
+    //Maximum range for the clouds to move
     private float MaxX = 15;
     private float MinX = -15;
     private float MaxZ = 15;
@@ -33,9 +34,9 @@ public class CloudController : MonoBehaviour
 
     void Update()
     {
+        //Game has not started yet so letzt just randomly move the clouds from side to side
         if (!fleeing)
         {
-
             if (transform.position.x > MaxX | transform.position.x < MinX | transform.position.z > MaxZ | transform.position.z < MinZ)
             {
                 transform.Rotate(0, -90, 0);
@@ -45,7 +46,6 @@ public class CloudController : MonoBehaviour
 
             if (Rotating == true && RotateDir == 1)
             {
-
                 RotationTime -= Time.deltaTime;
                 transform.Rotate(0, 1 * Speed * Time.deltaTime, 0);
                 if (RotationTime <= 0)
@@ -54,7 +54,6 @@ public class CloudController : MonoBehaviour
                     RotationTime = Random.Range(1, 5);
                 }
             }
-
 
             if (Rotating == true && RotateDir == 2)
             {
@@ -67,7 +66,6 @@ public class CloudController : MonoBehaviour
                     RotationTime = Random.Range(1, 5);
                 }
             }
-
 
             if (Rotating == false)
             {
@@ -82,9 +80,9 @@ public class CloudController : MonoBehaviour
                 }
             }
         }
-        else
+        else //Game hast startet so the white clouds must go
         {
-            var step = FleeingSpeed * Time.deltaTime; // calculate distance to move
+            var step = FleeingSpeed * Time.deltaTime; 
             transform.position = Vector3.MoveTowards(transform.position, FleeingPoint.position, step);
         }
     }

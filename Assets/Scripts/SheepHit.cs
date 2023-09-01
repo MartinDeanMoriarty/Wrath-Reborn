@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class SheepHit : MonoBehaviour
 {
-    //Gibbings Prefab
+    [Header("Bolt Sheep Collision")]
+    [Tooltip("Gibbings Prefab to spawn when sheep got hit")]
     public GameObject GibToSpawn;
-    //Blood Effect Prefab
-    //public GameObject FxToSpawn;
-    //Blood Decal Prefab
+    [Tooltip("Blood decal Prefab to spawn when sheep got hit")]
     public List<GameObject> DecalToSpawn;
-
-
+    [Tooltip("Explode Prefab to spawn when sheep got hit")]
     public GameObject ExplodeSpawn;
-
+    //Predefine GameController
     GameController GameController;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Get GameController
         GameController = FindAnyObjectByType<GameController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        //If Sheep got hit by Bolt
         if (collision.gameObject.CompareTag("Bolt"))
         {
             Destroy(gameObject);
@@ -31,22 +31,19 @@ public class SheepHit : MonoBehaviour
             GameController.sheepCount -= 1;
             GameController.allHits += 1;
             Instance();
-        }        
+        }
     }
 
     void Instance()
     {
-         
         //Gibbings Prefab
         Instantiate(GibToSpawn, gameObject.transform.position, Quaternion.identity);
+        //Explode Prefab
         GameObject explosion = Instantiate(ExplodeSpawn, gameObject.transform.position, Quaternion.identity);
-        Destroy(explosion,2);
-        //Blood Effect Prefab
-        //Instantiate(FxToSpawn, gameObject.transform.position, Quaternion.identity);
+        Destroy(explosion, 2);
         //Blood Decal Prefab
         Vector3 decalSpanPoint = gameObject.transform.position;
         decalSpanPoint.y = 0.02F;
-        Instantiate(DecalToSpawn[Random.Range(0, DecalToSpawn.Count)], decalSpanPoint, Quaternion.identity);         
-
+        Instantiate(DecalToSpawn[Random.Range(0, DecalToSpawn.Count)], decalSpanPoint, Quaternion.identity);
     }
 }
