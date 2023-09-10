@@ -43,7 +43,8 @@ public class ObjectHit : MonoBehaviour
         //The broken/destroyed version of the main object
         Instantiate(ObjectToSwap, gameObject.transform.position, gameObject.transform.rotation);
         //Debress Prefab 
-        Instantiate(DebressToSpawn, hitPoint, Quaternion.identity);
+        GameObject debress = Instantiate(DebressToSpawn, hitPoint, Quaternion.identity);
+        Destroy(debress, 4);
         //Explosion Prefab
         GameObject explosion = Instantiate(ExplosionToSpawn, hitPoint, Quaternion.identity);
         Destroy(explosion, 1);

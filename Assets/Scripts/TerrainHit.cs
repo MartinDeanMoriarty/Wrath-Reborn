@@ -38,7 +38,8 @@ public class TerrainHit : MonoBehaviour
     void Instance()
     {
         //Debress Prefab
-        Instantiate(DebressToSpawn, hitPoint, Quaternion.identity);
+        GameObject debress = Instantiate(DebressToSpawn, hitPoint, Quaternion.identity);
+        Destroy(debress, 4);
         //Explosion Prefab
         GameObject explosion = Instantiate(ExplosionToSpawn, hitPoint, Quaternion.identity);
         Destroy(explosion, 2);

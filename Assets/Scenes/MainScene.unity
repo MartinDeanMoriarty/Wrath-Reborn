@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1001 &19540869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &216734801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,8 +1823,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &374309200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2780,7 +2778,74 @@ MonoBehaviour:
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: 10, y: 10}
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  ResetTextStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -2794,10 +2859,289 @@ MonoBehaviour:
   maxSheeps: 10
   sheepCount: 0
   SheepHits: 0
-  CountString: 
-  payingGame: 0
+  RoundString: 
+  AllString: 
+  playingGame: 0
   maxRoundHits: 0
   allHits: 0
+  Medal:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  BronzeMedal:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 3efef2fecdd94914da4c035ec8ec1ea7, type: 3}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  BronzePoints: 50
+  SilverMedal:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 826179c945f2dd94cb95bc99cc233240, type: 3}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  SilverPoints: 80
+  GoldMedal:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 8844d82571661104181cae7306d30bc1, type: 3}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  GoldPoints: 100
+  PlatinMedal:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 773b601d28633a2419b945b3db8c1ac1, type: 3}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  PlatinPoints: 130
 --- !u!114 &441414482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2810,7 +3154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbe3b72e1a088141ae0c3b83a3693a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshairTexture: {fileID: 2800000, guid: a7ae80ae83422274f834cfafc5d2160b, type: 3}
+  crosshairTexture: {fileID: 2800000, guid: d409e5cecb062954a9c9335b9a40d146, type: 3}
   hotspot: {x: 16, y: 16}
 --- !u!114 &441414483
 MonoBehaviour:
@@ -2852,7 +3196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b775ae599d84fd347ab4d40f39d9a815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameCounterString: 
+  timeRemaining: 180
   TextStyle:
     m_Name: 
     m_Normal:
@@ -2920,6 +3264,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  GameCounterString: 
   Button:
     serializedVersion: 2
     x: 0
@@ -2949,8 +3294,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &459424699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2994,8 +3337,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &463518973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3372,8 +3713,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1 &478288088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3008297296414033687, guid: cb422acdc199d6e42910f589b81c283b, type: 3}
@@ -3406,8 +3745,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &482871438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3473,7 +3810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &491424995 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5478901678525506352, guid: 4a7a7d67fc11af54eb471a245fa7bc29, type: 3}
@@ -3523,7 +3860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &506747181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3008297296414033687, guid: cb422acdc199d6e42910f589b81c283b, type: 3}
@@ -3615,8 +3952,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &508398166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3803,8 +4138,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &518744745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4069,8 +4402,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &546010615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4413,8 +4744,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &641449982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4489,8 +4818,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &650319445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4665,8 +4992,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &690799181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4779,8 +5104,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &700760400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4898,8 +5221,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &727133959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5397,8 +5718,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &814813496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5542,8 +5861,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &839637004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5681,8 +5998,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1001 &872247481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5769,8 +6084,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &872247487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5877,8 +6190,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &873366847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6250,8 +6561,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &890471326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6385,7 +6694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &904338454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3008297296414033687, guid: cb422acdc199d6e42910f589b81c283b, type: 3}
@@ -6408,8 +6717,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &904338459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6618,7 +6925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &939676308
 GameObject:
   m_ObjectHideFlags: 0
@@ -6663,7 +6970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1001 &959150499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6904,7 +7211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab95004b09f853945a895dfdd41897b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
 --- !u!1 &1005359006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6936,7 +7242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 2780850103395821732, guid: 04e6207806f25b34d8f2f34b7993ab95, type: 3}
-  shotInterval: 0.3
   speed: 10
   BoltSounds:
   - {fileID: 396513946}
@@ -7040,8 +7345,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1006103358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7085,8 +7388,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1015446526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7281,8 +7582,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1046018886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7879,7 +8178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1001 &1112011876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7966,8 +8265,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1112011882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8208,8 +8505,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1147806999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8289,8 +8584,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1164896823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8429,8 +8722,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1176937686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8538,8 +8829,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1185142174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8776,8 +9065,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1246133351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8843,7 +9130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &1269631782
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,8 +9268,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1269671355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9054,8 +9339,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1 &1279374725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 170736, guid: c8f241d1151c5a14dbac88fd4bea1d93, type: 3}
@@ -9078,8 +9361,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!136 &1279374729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9263,8 +9544,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1311677111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9626,7 +9905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &1350385641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3008297296414033687, guid: cb422acdc199d6e42910f589b81c283b, type: 3}
@@ -9649,8 +9928,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1350385646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9763,8 +10040,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1356560104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9872,8 +10147,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1366706596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10058,8 +10331,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1377236562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10193,7 +10464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &1387696922
 GameObject:
   m_ObjectHideFlags: 0
@@ -10481,7 +10752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1001 &1422541642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10847,8 +11118,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1436758063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10892,8 +11161,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1453354658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10937,8 +11204,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1001 &1470275320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11025,8 +11290,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1470275326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11134,8 +11397,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1474659302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11248,8 +11509,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1486345226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11431,8 +11690,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!136 &1500503229
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11542,8 +11799,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1501372723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11587,8 +11842,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1508450567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11637,8 +11890,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1531031544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11877,8 +12128,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1549487621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11991,8 +12240,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1566278213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12036,8 +12283,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1568452214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12081,8 +12326,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1582611055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12126,8 +12369,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1587131449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12266,8 +12507,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1605772372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12380,8 +12619,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1623847407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12430,8 +12667,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1001 &1631244424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12518,8 +12753,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1631244430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12625,8 +12858,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1645588981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12744,8 +12975,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1661692428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12880,7 +13109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1 &1674311821
 GameObject:
   m_ObjectHideFlags: 0
@@ -13095,8 +13324,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1674610149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13171,8 +13398,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!136 &1679550563
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13218,8 +13443,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1681692498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13337,8 +13560,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1692010338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13458,8 +13679,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1726901535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13508,8 +13727,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1727706807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13617,8 +13834,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1729781821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13662,8 +13877,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1732508000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13738,8 +13951,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1747586214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13783,8 +13994,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1754678551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13828,8 +14037,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1764281558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13895,8 +14102,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1001 &1779342818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14009,8 +14214,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1001 &1819177087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14097,8 +14300,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1819177093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14263,8 +14464,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1001 &1854806873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14351,8 +14550,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1854806879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14396,8 +14593,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1872697278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14441,8 +14636,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1886335228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14588,8 +14781,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1903772390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14697,8 +14888,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1905824846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14842,8 +15031,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1911079804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14910,8 +15097,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!1 &1934422454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6632110124502492865, guid: a3bee5b2ffd08d5458a00d54a6cbfaed, type: 3}
@@ -15021,8 +15206,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1935801536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15066,8 +15249,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1936717477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15284,8 +15465,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1956691475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15419,7 +15598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12513ce7a83a3ff4289ce4e4f008e4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisSprite: {fileID: 0}
+  maxIntervall: 3
 --- !u!1001 &1962783343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15506,8 +15685,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1962783349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15615,8 +15792,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1971465510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15660,8 +15835,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1987258917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15705,8 +15878,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &1999775109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15750,8 +15921,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2048511032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15859,8 +16028,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2057142689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15904,8 +16071,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2057819951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15984,8 +16149,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2097096280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16093,8 +16256,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2108679632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16202,8 +16363,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2143901506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16311,8 +16470,6 @@ MonoBehaviour:
   ExplosionToSpawn: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   FXSpawn:
   - {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
-  hitPoint: {x: 0, y: 0, z: 0}
-  objectHit: {fileID: 0}
 --- !u!65 &2147435834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16342,10 +16499,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1213713759}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: ObjectToSwap
-      value: 
-      objectReference: {fileID: 7485308892633549365, guid: a333657ebdcc05641a96e417ae804832, type: 3}
     - target: {fileID: 182038, guid: 87475ce363e4bcf40b5791256be68f7d, type: 3}
       propertyPath: m_Name
       value: TreeType1_07

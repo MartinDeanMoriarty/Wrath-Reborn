@@ -37,7 +37,8 @@ public class SheepHit : MonoBehaviour
     void Instance()
     {
         //Gibbings Prefab
-        Instantiate(GibToSpawn, gameObject.transform.position, Quaternion.identity);
+        GameObject gibs = Instantiate(GibToSpawn, gameObject.transform.position, Quaternion.identity);
+        Destroy(gibs, 4);
         //Explode Prefab
         GameObject explosion = Instantiate(ExplodeSpawn, gameObject.transform.position, Quaternion.identity);
         Destroy(explosion, 2);

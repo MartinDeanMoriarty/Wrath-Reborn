@@ -70,6 +70,6 @@ public class GameTimer : MonoBehaviour
         {
             Button = new Rect(Screen.width/2-50,0,0,0);
             GUI.Button(Button, GameCounterString, TextStyle);
-        }  
+        }      
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 
 public class TitleScreen : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class TitleScreen : MonoBehaviour
     public Light MainLightSource;
     GameController GameController;
     int value1;
-    int value2;
+    int value2;    
 
     private void Start()
     {
