@@ -1,30 +1,35 @@
-#Wrath-Reborn
+#Wrath-Reborn  
 
-This is the code base of Wrath Reborn a game made with Unity3d written in C#.
+This is the code base of Wrath Reborn a game made with Unity3d written in C#.  
 
-It is by no means a professional work! It is my hobby and i like to throw stuff together and write code around it to make it work.
+It is by no means a professional work! It is my hobby and i like to throw stuff together and write code around it to make it work.  
 
-WrathReborn was not my idea! All credits go to Armegalo the maker of the original macromedia-flash-game Wrath.
+WrathReborn was not my idea! All credits go to Armegalo the maker of the original macromedia-flash-game Wrath.  
 
-WrathReborn is some kind of a casual "shooter" game. 
-You are the god of this world and rain down your wrath with lightning bolts.
-Beside that, there are no objectives what so ever, just wrath!
+WrathReborn is some kind of a casual "shooter" game.   
+You are the god of this world and rain down your wrath with lightning bolts.  
+Beside that, there are no objectives what so ever, just wrath!  
 
-Controls:
-It is simple. Use the mouse to point and shoot with left mouse button.
+Controls:  
+It is simple. Use the mouse to point and shoot with left mouse button.  
 Thats it :)
 
 ![In-Game-Screenshot](wrathreborn.jpg)
 
-There are not any different versions like Alpha, Beta, just the one i will reupload if any significant changes are made.
-You can build the Project your self or if you trust me, you can use this Link:
-https://drive.google.com/file/d/1S0mm2UbUYDsNaScgdlfYjlG02iVoCNlX/view?usp=sharing
+There are not any different versions like Alpha, Beta, just the one i will reupload if any significant changes are made.  
+You can build the Project your self or if you trust me, you can use this Link:  
+Windows Build from 11.Sept.2023  
+https://drive.google.com/file/d/1S0mm2UbUYDsNaScgdlfYjlG02iVoCNlX/view?usp=sharing  
+How to Install: Unzip and run!
 
-How to Play: Unzip and run!
+Android Build Here:  
+https://drive.google.com/file/d/16Q_mnqt0vWI9m-pfaJaop5PXDi17XQ5L/view?usp=sharing  
+How to Install: Unzip, copy APK to device and run!  
+ 
 
-Please do not upload any builds of the game elsewhere. Thank you!
+Please do not upload any builds of the game elsewhere. Thank you!  
 
-Credits:
+Credits:  
 
 Armegalo
 The flash game Wrath
