@@ -3070,7 +3070,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  GoldPoints: 150
+  GoldPoints: 120
   gotGold: 0
   PlatinMedal:
     m_Name: Platin

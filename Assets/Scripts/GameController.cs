@@ -53,6 +53,19 @@ public class GameController : MonoBehaviour
 
     float WonMedalSizeW = 0;
     float WonMedalSizeH = 0;
+    float initialScale = 0;
+    float upScale = 128;
+
+    float WonMedalPosX = Screen.width / 2 - 64;
+    float WonMedalPosY = Screen.height / 2 - 64;
+    float initialPosX = Screen.width / 2 - 64;
+    float initialPosY = Screen.height / 2 - 64;
+    float endPosX = 0;
+    float endPosY = 45;
+
+    float timeElapsed;
+    float lerpDuration = 0.5f;
+
 
     private void Start()
     {
@@ -99,7 +112,7 @@ public class GameController : MonoBehaviour
             Button = new Rect(0, 45, 128, 128);
             GUI.Button(Button, "", ActualMedal);
 
-            Button = new Rect(Screen.width / 2 - 64, Screen.height / 2 - 64, WonMedalSizeW, WonMedalSizeH);
+            Button = new Rect(WonMedalPosX, WonMedalPosY, WonMedalSizeW, WonMedalSizeH);
             GUI.Button(Button, "", WonMedal);
 
             CheckForNewMedal();
@@ -129,29 +142,50 @@ public class GameController : MonoBehaviour
 
     void CheckForNewMedal()
     {
-        if (SheepHits == BronzePoints && !gotBronze) { gotBronze = true; ActualMedal = BronzeMedal; WonMedal = BronzeMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
-        if (SheepHits == SilverPoints && !gotSilver) { gotSilver = true; ActualMedal = SilverMedal; WonMedal = SilverMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
-        if (SheepHits == GoldPoints && !gotGold) { gotGold = true; ActualMedal = GoldMedal; WonMedal = GoldMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
-        if (SheepHits == PlatinPoints && !gotPlatin) { gotPlatin = true; ActualMedal = PlatinMedal; WonMedal = PlatinMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
+        if (SheepHits >= BronzePoints && !gotBronze) { gotBronze = true; WonMedal = BronzeMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
+        if (SheepHits >= SilverPoints && !gotSilver) { gotSilver = true; WonMedal = SilverMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
+        if (SheepHits >= GoldPoints && !gotGold) { gotGold = true; WonMedal = GoldMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
+        if (SheepHits >= PlatinPoints && !gotPlatin) { gotPlatin = true; WonMedal = PlatinMedal; MedalSource.Play(); StartCoroutine(MedalAnim()); }
     }
 
     IEnumerator MedalAnim()
     {
-        float upScale = 128;
-        float duration = 1;
-        float initialScale = 0;   
-
-        for (float time = 0; time < duration * 2; time += Time.deltaTime)
+        float timeElapsed = 0;
+        while (timeElapsed < lerpDuration)
         {
-            float progress = Mathf.PingPong(time, duration) / duration;
+            WonMedalSizeW = Mathf.Lerp(initialScale, upScale, timeElapsed / lerpDuration);
+            WonMedalSizeH = Mathf.Lerp(initialScale, upScale, timeElapsed / lerpDuration);
 
-            WonMedalSizeW = Mathf.Lerp(initialScale, upScale, progress);
-            WonMedalSizeH = Mathf.Lerp(initialScale, upScale, progress);
-
+            timeElapsed += Time.deltaTime;
             yield return null;
-        }      
+        }
+        //WonMedalSizeW = upScale;
+        //WonMedalSizeH = upScale;
+
+        //yield return new WaitForSeconds(1);
+
+        StartCoroutine(MedalAnim2());
+    }
+    IEnumerator MedalAnim2()
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < lerpDuration)
+        {
+            WonMedalPosX = Mathf.Lerp(initialPosX, endPosX, timeElapsed / lerpDuration);
+            WonMedalPosY = Mathf.Lerp(initialPosY, endPosY, timeElapsed / lerpDuration);
+
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+         
+
         WonMedalSizeW = initialScale;
         WonMedalSizeH = initialScale;
+        WonMedalPosX = initialPosX;
+        WonMedalPosY = initialPosY;
+
+        ActualMedal = WonMedal;
     }
 
     void SetActualMedal()
