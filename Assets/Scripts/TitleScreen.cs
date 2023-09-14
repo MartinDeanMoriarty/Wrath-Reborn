@@ -26,7 +26,8 @@ public class TitleScreen : MonoBehaviour
     public Light MainLightSource;
     GameController GameController;
     int value1;
-    int value2;    
+    int value2;
+    bool startInput;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class TitleScreen : MonoBehaviour
     void Update()
     {
         //Hit Space to play
-        if (Input.GetKey(KeyCode.Space) && Title.activeSelf)
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0) && Title.activeSelf)
         {
             //Set fleeing=true in CloudController.cs
             for (int i = 0; i < WhiteClouds.Count; i++)
@@ -63,7 +64,6 @@ public class TitleScreen : MonoBehaviour
         {
             Application.Quit();
         }
-
     }
 
     //END game, not EXIT!
@@ -78,7 +78,6 @@ public class TitleScreen : MonoBehaviour
         {
             value1 = GameController.maxRoundHits;
         }
-
         int value2 = GameController.allHits;
 
         PlayerPrefs.SetInt("Round", value1);

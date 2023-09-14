@@ -20,9 +20,9 @@ public class MainCloudEffect : MonoBehaviour
         {
             ThisSprite.color = Color.yellow;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else
         {
-            ThisSprite.color = Color.white;
+            ThisSprite.color = Color.white;         
         }
     }
 }

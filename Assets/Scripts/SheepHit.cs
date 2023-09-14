@@ -25,12 +25,12 @@ public class SheepHit : MonoBehaviour
     {
         //If Sheep got hit by Bolt
         if (collision.gameObject.CompareTag("Bolt"))
-        {
-            Destroy(gameObject);
+        {            
             GameController.SheepHits += 1;
             GameController.sheepCount -= 1;
             GameController.allHits += 1;
             Instance();
+            Destroy(gameObject);
         }
     }
 

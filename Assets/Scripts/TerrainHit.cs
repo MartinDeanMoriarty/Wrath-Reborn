@@ -32,7 +32,6 @@ public class TerrainHit : MonoBehaviour
         {
             // The raycast hit something
             hitPoint = hit.point; // This is the exact world coordinate where the raycast hit
-
         }
     }
     void Instance()

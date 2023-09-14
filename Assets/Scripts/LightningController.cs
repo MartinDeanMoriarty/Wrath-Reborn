@@ -35,7 +35,7 @@ public class LightningController : MonoBehaviour
         //Rotate the bolt to the crosshair
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
 
-        //Ahooting action
+        //Shooting action
         if (Input.GetMouseButtonDown(0))
         {
             //Raycast for the bolt/projectile target

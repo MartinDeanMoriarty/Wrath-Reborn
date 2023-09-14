@@ -10,7 +10,7 @@ public class GameTimer : MonoBehaviour
     public float timeRemaining = 180; //180 = 3 minutes in seconds   
     public GUIStyle TextStyle;
     [Header("DoNotChangeInInspector")]
-    public string GameCounterString;
+    public string GameCounterString = "0:00";
     [HideInInspector] public Rect Button;     
     public bool timerIsRunning = false;
     TitleScreen TitleScreen;
